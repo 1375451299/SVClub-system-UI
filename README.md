@@ -33,6 +33,6 @@
 ![Image text](https://github.com/lin-xin/manage-system/raw/master/screenshots/wms1.png)
 
 
-## License
+## 原模板
 
-[MIT](https://github.com/lin-xin/vue-manage-system/blob/master/LICENSE)
+[ORG](https://gitcode.net/mirrors/lin-xin/vue-manage-system)
