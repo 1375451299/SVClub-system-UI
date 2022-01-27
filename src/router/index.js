@@ -1,6 +1,5 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 import Home from "../views/Home.vue";
-
 const routes = [
     {
         path: '/',
@@ -14,17 +13,50 @@ const routes = [
                 path: "/dashboard",
                 name: "dashboard",
                 meta: {
-                    title: '系统首页'
+                    title: '首页'
                 },
                 component: () => import ( /* webpackChunkName: "dashboard" */ "../views/Dashboard.vue")
-            }, {
-                path: "/table",
-                name: "basetable",
+            }, 
+            {
+                path: "/Producttable",
+                name: "Producttable",
                 meta: {
-                    title: '表格'
+                    title: '产品'
                 },
-                component: () => import ( /* webpackChunkName: "table" */ "../views/BaseTable.vue")
-            }, {
+                component: () => import ( /* webpackChunkName: "table" */ "../views/product/ProductTable.vue")
+            },
+            {
+                path: "/Devicetable",
+                name: "Devicetable",
+                meta: {
+                    title: '设备'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/device/DeviceTable.vue")
+            },
+            {
+                path: "/Logtable",
+                name: "Logtable",
+                meta: {
+                    title: '日志服务'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/LogTable.vue")
+            },
+            {
+                path: "/Subtable",
+                name: "Subtable",
+                meta: {
+                    title: '服务端订阅'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/Subtable.vue")
+            },
+            {
+                path: "/Transtable",
+                name: "Transtable",
+                meta: {
+                    title: '云产品流转'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/Transtable.vue")
+            },{
                 path: "/charts",
                 name: "basecharts",
                 meta: {
@@ -39,20 +71,20 @@ const routes = [
                 },
                 component: () => import ( /* webpackChunkName: "form" */ "../views/BaseForm.vue")
             }, {
-                path: "/tabs",
-                name: "tabs",
+                path: "/producttabs",
+                name: "producttabs",
                 meta: {
-                    title: 'tab标签'
+                    title: '产品概要'
                 },
-                component: () => import ( /* webpackChunkName: "tabs" */ "../views/Tabs.vue")
+                component: () => import ( /* webpackChunkName: "tabs" */ "../views/product/productTabs.vue")
             }, {
-                path: "/donate",
-                name: "donate",
+                path: "/devicetabs",
+                name: "devicetabs",
                 meta: {
-                    title: '鼓励作者'
+                    title: '设备详情'
                 },
-                component: () => import ( /* webpackChunkName: "donate" */ "../views/Donate.vue")
-            }, {
+                component: () => import ( /* webpackChunkName: "tabs" */ "../views/device/DeviceTabs.vue")
+            },  {
                 path: "/permission",
                 name: "permission",
                 meta: {
@@ -67,14 +99,7 @@ const routes = [
                     title: '国际化语言'
                 },
                 component: () => import ( /* webpackChunkName: "i18n" */ "../views/I18n.vue")
-            }, {
-                path: "/upload",
-                name: "upload",
-                meta: {
-                    title: '上传插件'
-                },
-                component: () => import ( /* webpackChunkName: "upload" */ "../views/Upload.vue")
-            }, {
+            },{
                 path: "/icon",
                 name: "icon",
                 meta: {
